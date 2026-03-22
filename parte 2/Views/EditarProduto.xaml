@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppMinhasCompras.Views.EditarProduto"
+             Title="{Binding Descricao}">
+
+    <!-- Botão na barra superior para salvar alterações -->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <!-- Layout principal da tela de edição -->
+    <VerticalStackLayout Spacing="10" Padding="10">
+
+        <!-- Campo de edição da descrição -->
+        <Label Text="Descrição do Produto:" />
+        <Entry x:Name="txt_descricao" Text="{Binding Descricao}" />
+
+        <!-- Campo de edição da quantidade -->
+        <Label Text="Quantidade:" />
+        <Entry x:Name="txt_quantidade" Text="{Binding Quantidade}" Keyboard="Numeric" />
+
+        <!-- Campo de edição do preço unitário -->
+        <Label Text="Preço Unitário:" />
+        <Entry x:Name="txt_preco" Text="{Binding Preco}" Keyboard="Numeric" />
+
+    </VerticalStackLayout>
+</ContentPage>
